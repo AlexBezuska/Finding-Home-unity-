@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Your Mother
   talkToNode: mama-owl
-  scriptToLoad: {fileID: 4900000, guid: d05acc38869054ae19dc56c00d48096e, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!4 &456279612
 Transform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Turtle
   talkToNode: turtle
-  scriptToLoad: {fileID: 4900000, guid: d05acc38869054ae19dc56c00d48096e, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!4 &714170928
 Transform:
   m_ObjectHideFlags: 0
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Owl
   talkToNode: owl
-  scriptToLoad: {fileID: 4900000, guid: d05acc38869054ae19dc56c00d48096e, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!4 &1500712010
 Transform:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Bee
   talkToNode: bee
-  scriptToLoad: {fileID: 4900000, guid: d05acc38869054ae19dc56c00d48096e, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!4 &1743052076
 Transform:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Wombat
   talkToNode: wombat
-  scriptToLoad: {fileID: 4900000, guid: d05acc38869054ae19dc56c00d48096e, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!4 &1827312426
 Transform:
   m_ObjectHideFlags: 0

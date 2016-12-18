@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Start",
+		"tags": "",
+		"body": "blah",
+		"position": {
+			"x": -218,
+			"y": 21
+		},
+		"colorID": 0
+	},
+	{
 		"title": "mama-bee",
 		"tags": "",
 		"body": "You: \"Mama, why don't we have a burrow that fits  a whole family with lots of space?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother: \"Maybe you should talk to a bee near the old grove and see about what they call home...\"",
