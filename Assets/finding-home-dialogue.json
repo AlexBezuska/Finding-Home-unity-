@@ -22,7 +22,7 @@
 	{
 		"title": "mama-owl",
 		"tags": "",
-		"body": "You: \"Mama, why don't we have a nice home like the other animals in the forest?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother:\"Maybe you should talk to the owl down the bend and see what kind of home they like to live in...\"\n",
+		"body": "You: \"Mama, why don't we have a nice home like the other animals in the forest?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother: \"Maybe you should talk to the owl down the bend and see what kind of home they like to live in...\"\n",
 		"position": {
 			"x": 35,
 			"y": 135
@@ -35,7 +35,7 @@
 		"body": "Owl: \"Hello there slow poke, what brings you by our great oak?\"\nYou: \"I see you live in a great big tree, high above the busyness of the forest floor\"\nOwl: \"My home IS fantastic, our tree hole protects us and lets us look down at everything happening below.\"\nYou: \"I have no home to keep me safe high above, I have no place to look down from...\"",
 		"position": {
 			"x": 35,
-			"y": 357
+			"y": 355
 		},
 		"colorID": 0
 	},

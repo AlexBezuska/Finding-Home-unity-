@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3419b57eb638f44db88701b5b33b8af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: You
+  characterName: Snail
   talkToNode: 
   scriptToLoad: {fileID: 0}
 --- !u!114 &1459268130
@@ -1945,7 +1945,7 @@ Prefab:
     - target: {fileID: 114284568967554840, guid: 2f591b7cd1a204ecbbfe2e520a89e2d6,
         type: 2}
       propertyPath: textSpeed
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f591b7cd1a204ecbbfe2e520a89e2d6, type: 2}
