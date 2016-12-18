@@ -1,0 +1,92 @@
+[
+	{
+		"title": "mama-bee",
+		"tags": "",
+		"body": "You: \"Mama, why don't we have a burrow that fits  a whole family with lots of space?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother: \"Maybe you should talk to a bee near the old grove and see about what they call home...\"",
+		"position": {
+			"x": 503,
+			"y": 135
+		},
+		"colorID": 0
+	},
+	{
+		"title": "wombat",
+		"tags": "",
+		"body": "Wombat: \"Oh hello tiny one, what brings you by our den today?\"\nYou: \"...a den... I want to learn about your home...\"\nWombat: \"Inside the ground is where me and my brothers call home. My mama was thorough when she dug out our burrow. We share our space and keep each other safe.\"\nYou: \"I have no brothers to share my space, there is only one room in my place.\"\n",
+		"position": {
+			"x": 271,
+			"y": 357
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mama-owl",
+		"tags": "",
+		"body": "You: \"Mama, why don't we have a nice home like the other animals in the forest?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother:\"Maybe you should talk to the owl down the bend and see what kind of home they like to live in...\"\n",
+		"position": {
+			"x": 35,
+			"y": 135
+		},
+		"colorID": 0
+	},
+	{
+		"title": "owl",
+		"tags": "",
+		"body": "Owl: \"Hello there slow poke, what brings you by our great oak?\"\nYou: \"I see you live in a great big tree, high above the busyness of the forest floor\"\nOwl: \"My home IS fantastic, our tree hole protects us and lets us look down at everything happening below.\"\nYou: \"I have no home to keep me safe high above, I have no place to look down from...\"",
+		"position": {
+			"x": 35,
+			"y": 357
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mama-wombat",
+		"tags": "",
+		"body": "You: \"Mama, why don't we have a home up high, to keep us safe and watch from the sky?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother: \"Maybe you should talk to the wombat down the way and see where they like to stay...\"\n",
+		"position": {
+			"x": 271,
+			"y": 135
+		},
+		"colorID": 0
+	},
+	{
+		"title": "bee",
+		"tags": "",
+		"body": "Bee: \"Hail queen Claire! Oh hello I didn't zzzee you down there.... \"\nYou: \"I hear in this forest you bees buzz and thrive, why may I ask, does it have to do with your hive?\"\nBee: \"Well for those of us that buzz we each have a task, we work hard to do what the queen may ask.\"\nBee: \"Upon waxy beds we each lay our heads! It's hexagonal chambers protect us from dangers! What it secreets is golden and sweet.\"\nYou: \"Thank you kind bee - you've done me a favor, now I will let you get back to your labor.\"\n  ",
+		"position": {
+			"x": 506,
+			"y": 358
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mama-turtle",
+		"tags": "",
+		"body": "You: \"Mama, why don't we have a queen to serve, sweets to eat, and jobs to complete?\"\nYour Mother: \"There, there little one, I assure you we do have great homes, everything in the forest has it's place, and in our case our place has us...\"\nYour Mother: \"Maybe you should talk to the old turtle by the lake but don't fall in for goodness' sake...\"",
+		"position": {
+			"x": 741,
+			"y": 135
+		},
+		"colorID": 0
+	},
+	{
+		"title": "turtle",
+		"tags": "",
+		"body": "You: \"Hello turtle, would you tell me about your home in the pond?\"\nTurtle: \"Being at the pond IS fun, but tomorrow I reckon I'll be on the run...\"\nYou: \"Oh no... don't you have a place to call your own?\"\nTurtle: \"Let me explain - Folks like us are one in the same! Our shell is our home, it allows us to roam.\"\nTurtle: \"It takes me places and I bring it along. It's part of us, and us part of home.\"\nYou: \"....!\"",
+		"position": {
+			"x": 740,
+			"y": 359
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mama",
+		"tags": "",
+		"body": "You: \"Mama, mama! I need to tell you what the wise turtle told me.\"\nYour Mother: \"Oh? Well tell me what you've learned!\"\nYou: \"I may not live in a hive of royalty, but a noisy home isn't right for me.\"\nYou: \"A burrow with fuzzy brothers sounds comfy, but having my own spot to recharge is lovely.\"\nYou: \"I've had a great home all along, now I see!\"\nYou: \"It gives me the freedom to crawl and explore, and you know I always want to see more.\"\nYou: \"It may be humble, it may be small... but I am tiny after all!\"\nYou: \"Everything in the forest has it's place, and my shell is my own space!\"\nYou: \"I'm part of it and it's part of me and thats the only way I would want it to be!\"",
+		"position": {
+			"x": 974,
+			"y": 137
+		},
+		"colorID": 0
+	}
+]
