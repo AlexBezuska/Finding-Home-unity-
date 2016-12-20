@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 131ab32e22a5b469c8ad582120a38e81
-timeCreated: 1481940350
+timeCreated: 1482168045
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -112,9 +112,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 21
-        width: 21
-        height: 21
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,10 +124,10 @@ TextureImporter:
       name: snail-small_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 21
-        width: 21
-        height: 21
+        x: 25
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: snail-small_2
       rect:
         serializedVersion: 2
-        x: 42
-        y: 21
-        width: 21
-        height: 21
+        x: 50
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: snail-small_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 21
-        width: 21
-        height: 21
+        x: 75
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: snail-small_4
       rect:
         serializedVersion: 2
-        x: 84
-        y: 21
-        width: 21
-        height: 21
+        x: 100
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: snail-small_5
       rect:
         serializedVersion: 2
-        x: 105
-        y: 21
-        width: 21
-        height: 21
+        x: 125
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: snail-small_6
       rect:
         serializedVersion: 2
-        x: 126
-        y: 21
-        width: 21
-        height: 21
+        x: 150
+        y: 25
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +204,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: snail-small_8
       rect:
         serializedVersion: 2
-        x: 21
+        x: 25
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: snail-small_9
       rect:
         serializedVersion: 2
-        x: 42
+        x: 50
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: snail-small_10
       rect:
         serializedVersion: 2
-        x: 63
+        x: 75
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: snail-small_11
       rect:
         serializedVersion: 2
-        x: 84
+        x: 100
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: snail-small_12
       rect:
         serializedVersion: 2
-        x: 105
+        x: 125
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: snail-small_13
       rect:
         serializedVersion: 2
-        x: 126
+        x: 150
         y: 0
-        width: 21
-        height: 21
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -54,47 +54,71 @@ namespace Yarn.Unity.Example {
 
     public float speed = 1.5f;
     private Vector3 target;
-    public Animation anim;
+    private Vector3 positionLastFrame;
+    private Animator animator;
     private SpriteRenderer mySpriteRenderer;
+    private ParticleSystem snailTrail;
+    private Color debugLineColor = new Color(1F, 1F, 1F, 0.01F);
 
     void Start() {
-      anim = GetComponent<Animation>();
+      animator = GetComponent<Animator>();
       target = transform.position;
+      positionLastFrame = transform.position;
       mySpriteRenderer = GetComponent<SpriteRenderer>();
+      snailTrail = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
     }
+
 
 
     // Update is called once per frame
     void Update () {
 
       if (FindObjectOfType<DialogueRunner>().isDialogueRunning == true) {
-        //Debug.Log("I cant do this");
+        // For animator state machine
+        animator.SetBool("moving", false);
+        target = transform.position;
         return;
       }
 
 
-      if (Input.GetMouseButtonDown(0)) {
-        Debug.Log("click");
+      if (Input.GetMouseButton(0)) {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
-
-        RaycastHit2D hit = Physics2D.Raycast(target, -Vector2.up);
-        if (hit && hit.transform.gameObject.GetComponent("NPC")) {
-          CheckForNearbyNPC ();
-        }
       }
+
       if (transform.position != target){
+      //Debug.Log(transform.position);
+        //Debug.Log(target);
+
+        // direction to face
         if (target.x < transform.position.x){
-          //facing left
           mySpriteRenderer.flipX = true;
         } else {
           mySpriteRenderer.flipX = false;
         }
-        anim.Play();
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        // For animator state machine
+        animator.SetBool("moving", true);
+        snailTrail.Play();
 
       } else{
-        anim.Stop();
+        // For animator state machine
+        animator.SetBool("moving", false);
+        snailTrail.Pause();
+      }
+      positionLastFrame = transform.position;
+
+
+
+    //  DrawLine(transform.position, target, debugLineColor, 0.2f);
+
+      transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+      if (Input.GetMouseButtonDown(0)) {
+        Debug.Log("click");
+        RaycastHit2D hit = Physics2D.Raycast(target, -Vector2.up);
+        if (hit && hit.transform.gameObject.GetComponent("NPC")) {
+          CheckForNearbyNPC ();
+        }
       }
 
 
@@ -118,6 +142,22 @@ namespace Yarn.Unity.Example {
           FindObjectOfType<DialogueRunner> ().StartDialogue (target.talkToNode);
         }
       }
+
+
+      void DrawLine(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
+      {
+          GameObject myLine = new GameObject();
+          myLine.transform.position = start;
+          myLine.AddComponent<LineRenderer>();
+          LineRenderer lr = myLine.GetComponent<LineRenderer>();
+          lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+          lr.SetColors(color, color);
+          lr.SetWidth(0.1f, 0.1f);
+          lr.SetPosition(0, start);
+          lr.SetPosition(1, end);
+          GameObject.Destroy(myLine, duration);
+      }
+
 
     }
 

@@ -74,9 +74,9 @@ namespace Yarn.Unity.Example {
 
 			lineText.gameObject.SetActive (false);
 
-			foreach (var button in optionButtons) {
-				button.gameObject.SetActive (false);
-			}
+			// foreach (var button in optionButtons) {
+			// 	button.gameObject.SetActive (false);
+			// }
 
 			// Hide the continue prompt if it exists
 			if (continuePrompt != null)
