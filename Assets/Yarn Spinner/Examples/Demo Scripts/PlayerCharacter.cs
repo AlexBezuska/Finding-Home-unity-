@@ -30,6 +30,7 @@ using System.Collections.Generic;
 
 namespace Yarn.Unity.Example {
   public class PlayerCharacter : MonoBehaviour {
+    public static PlayerCharacter instance;
 
     public float minPosition = -5.3f;
     public float maxPosition = 5.3f;
@@ -51,16 +52,20 @@ namespace Yarn.Unity.Example {
       Gizmos.DrawWireSphere(Vector3.zero, interactionRadius);
     }
 
-
+    public GameObject dialogueContainer;
     public float speed = 1.5f;
     private Vector3 target;
     private Vector3 positionLastFrame;
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
     private ParticleSystem snailTrail;
-    private Color debugLineColor = new Color(1F, 1F, 1F, 0.01F);
+    private Color debugLineColor = new Color(1F, 1F, 1F, 0.5F);
+    private Color red = new Color(1F, 0F, 0F, 0.5F);
+    float waitAfterTalk = 0.5f;
+    public bool canTalk = true;
 
     void Start() {
+      instance = this;
       animator = GetComponent<Animator>();
       target = transform.position;
       positionLastFrame = transform.position;
@@ -68,26 +73,53 @@ namespace Yarn.Unity.Example {
       snailTrail = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
     }
 
-
-
     // Update is called once per frame
     void Update () {
+
+      if(canTalk == false){
+        waitAfterTalk -= Time.deltaTime;
+        Debug.Log(waitAfterTalk);
+      }
+
+      if(waitAfterTalk < 0){
+        canTalk = true;
+        waitAfterTalk = 0.5f;
+      }
 
       if (FindObjectOfType<DialogueRunner>().isDialogueRunning == true) {
         // For animator state machine
         animator.SetBool("moving", false);
         target = transform.position;
+        snailTrail.emissionRate = 0;
         return;
       }
 
+      if (Input.GetMouseButton(0) && canTalk) {
 
-      if (Input.GetMouseButton(0)) {
+        //check if ray intersects any colliders
+
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+        //RaycastHit2D safetyCheck = Physics2D.Raycast(target, transform.position);
+
+        // if (safetyCheck
+        // && safetyCheck.transform.gameObject.GetComponent("NPC")) {
+        //   //Debug.Log(safetyCheck.transform.name);
+        //   //DrawLine(transform.position, target, red, 0.2f);
+        //   target = transform.position;
+        // } else {
+
+        //
+        //DrawLine(transform.position, target, debugLineColor, 0.2f);
+        //}
+
         target.z = transform.position.z;
+
       }
 
       if (transform.position != target){
-      //Debug.Log(transform.position);
+        //Debug.Log(transform.position);
         //Debug.Log(target);
 
         // direction to face
@@ -98,28 +130,30 @@ namespace Yarn.Unity.Example {
         }
         // For animator state machine
         animator.SetBool("moving", true);
-        snailTrail.Play();
+        snailTrail.emissionRate = 15;
 
       } else{
         // For animator state machine
         animator.SetBool("moving", false);
-        snailTrail.Pause();
+        snailTrail.emissionRate = 0;
       }
       positionLastFrame = transform.position;
 
 
 
-    //  DrawLine(transform.position, target, debugLineColor, 0.2f);
+      //  DrawLine(transform.position, target, debugLineColor, 0.2f);
 
       transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-      if (Input.GetMouseButtonDown(0)) {
+      if (Input.GetMouseButtonDown(0) && canTalk) {
         Debug.Log("click");
         RaycastHit2D hit = Physics2D.Raycast(target, -Vector2.up);
         if (hit && hit.transform.gameObject.GetComponent("NPC")) {
           CheckForNearbyNPC ();
         }
       }
+
+
 
 
     }
@@ -146,16 +180,16 @@ namespace Yarn.Unity.Example {
 
       void DrawLine(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
       {
-          GameObject myLine = new GameObject();
-          myLine.transform.position = start;
-          myLine.AddComponent<LineRenderer>();
-          LineRenderer lr = myLine.GetComponent<LineRenderer>();
-          lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
-          lr.SetColors(color, color);
-          lr.SetWidth(0.1f, 0.1f);
-          lr.SetPosition(0, start);
-          lr.SetPosition(1, end);
-          GameObject.Destroy(myLine, duration);
+        GameObject myLine = new GameObject();
+        myLine.transform.position = start;
+        myLine.AddComponent<LineRenderer>();
+        LineRenderer lr = myLine.GetComponent<LineRenderer>();
+        lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+        lr.SetColors(color, color);
+        lr.SetWidth(0.1f, 0.1f);
+        lr.SetPosition(0, start);
+        lr.SetPosition(1, end);
+        GameObject.Destroy(myLine, duration);
       }
 
 

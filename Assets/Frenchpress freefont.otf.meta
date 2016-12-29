@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c2d4fea14d31c4185803fd2001ed09df
+timeCreated: 1482251169
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Frenchpress
+  fontNames:
+  - Frenchpress
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

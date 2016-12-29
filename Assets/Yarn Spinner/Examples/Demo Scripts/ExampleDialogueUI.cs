@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 The MIT License (MIT)
 
@@ -90,13 +90,20 @@ namespace Yarn.Unity.Example {
 			// Show the text
 			lineText.gameObject.SetActive (true);
 
-			if (textSpeed > 0.0f) {
+      if (textSpeed > 0.0f) {
 				// Display the line one character at a time
 				var stringBuilder = new StringBuilder ();
 
+				int i = 0;
 				foreach (char c in line.text) {
 					stringBuilder.Append (c);
 					lineText.text = stringBuilder.ToString ();
+					if(Input.anyKeyDown && i >= 10){
+						lineText.text = line.text;
+            yield return new WaitForSeconds (textSpeed);
+						break;
+					}
+					i++;
 					yield return new WaitForSeconds (textSpeed);
 				}
 			} else {
@@ -195,6 +202,7 @@ namespace Yarn.Unity.Example {
 		public override IEnumerator DialogueComplete ()
 		{
 			Debug.Log ("Complete!");
+      PlayerCharacter.instance.canTalk = false;
 
 			// Hide the dialogue interface.
 			if (dialogueContainer != null)
