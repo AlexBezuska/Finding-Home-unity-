@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,11 @@ public class playerMovement2d : MonoBehaviour {
       animator = GetComponent<Animator>();
       target = transform.position;
       mySpriteRenderer = GetComponent<SpriteRenderer>();
-      snailTrail = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+      try {
+        snailTrail = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+      } catch (Exception e) {
+        print("error" + e);
+      }
     }
 
     void Update () {
@@ -57,12 +62,17 @@ public class playerMovement2d : MonoBehaviour {
         }
         // For animator state machine
         animator.SetBool("moving", true);
-        snailTrail.emissionRate = 20;
+        if(snailTrail){
+          snailTrail.emissionRate = 20;
+        }
 
       } else{
         // For animator state machine
         animator.SetBool("moving", false);
-        snailTrail.emissionRate = 0;
+        if(snailTrail){
+          snailTrail.emissionRate = 0;
+        }
+
       }
 
       transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
